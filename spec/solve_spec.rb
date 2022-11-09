@@ -1,3 +1,5 @@
+require_relative './spec_helper.rb'
+
 describe Solver do
   it 'test for the solver factorial method' do
     solve = Solver.new
@@ -12,5 +14,12 @@ describe Solver do
     expect(solve.reverse('hello')).to eq('olleh')
     expect(solve.reverse('Yunus')).to eq('sunuY')
     expect(solve.reverse('hello')).to be_kind_of(String)
+  end
+  it 'test for the solver fizzbuzz method' do
+    solve = Solver.new
+    expect(solve.fizzbuzz(15)).to eq('fizzbuzz')
+    expect(solve.fizzbuzz(3)).to eq('fizz')
+    expect(solve.fizzbuzz(5)).to eq('buzz')
+    expect(solve.fizzbuzz(2)).to eq('2')
   end
 end
