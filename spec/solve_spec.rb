@@ -1,4 +1,4 @@
-require_relative './spec_helper'
+require_relative 'spec_helper'
 
 describe Solver do
   it 'test for the solver factorial method' do
@@ -7,6 +7,7 @@ describe Solver do
     expect(solve.factorial(5)).to eq(120)
     expect(solve.factorial(0)).to eq(1)
     expect(solve.factorial(1)).to eq(1)
+    expect{solve.factorial(-1)}.to raise_error(ArgumentError)
   end
   it 'test for the solver reverse method' do
     solve = Solver.new
